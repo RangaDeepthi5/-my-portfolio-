@@ -1,50 +1,40 @@
-
 import React, { useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
-// Sample project data
+// Updated project data with your projects
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A fully responsive e-commerce platform with product filtering, cart functionality, and secure checkout.',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    image: 'https://placehold.co/600x400/e9ecef/6c757d?text=E-Commerce+Project',
+    title: 'Hostel Management System',
+    description: 'A comprehensive system for managing hostel operations including room allocation, student records, and fee management.',
+    tags: ['Java', 'MySQL', 'DBMS'],
+    image: 'https://placehold.co/600x400/e9ecef/6c757d?text=Hostel+Management+System',
     liveLink: '#',
     githubLink: '#',
   },
   {
     id: 2,
-    title: 'Portfolio Website',
-    description: 'Modern and minimalist portfolio website with smooth animations and responsive design.',
-    tags: ['React', 'Tailwind CSS', 'Framer Motion'],
-    image: 'https://placehold.co/600x400/e9ecef/6c757d?text=Portfolio+Project',
+    title: 'Blood Bank Management System',
+    description: 'An efficient system for tracking blood inventory, donor information, and blood request management for hospitals and blood banks.',
+    tags: ['Java', 'MySQL', 'DBMS'],
+    image: 'https://placehold.co/600x400/e9ecef/6c757d?text=Blood+Bank+System',
     liveLink: '#',
     githubLink: '#',
   },
   {
     id: 3,
-    title: 'Task Management App',
-    description: 'A productivity app for managing tasks with drag-and-drop functionality and team collaboration features.',
-    tags: ['TypeScript', 'React', 'Firebase'],
-    image: 'https://placehold.co/600x400/e9ecef/6c757d?text=Task+Management+App',
-    liveLink: '#',
-    githubLink: '#',
-  },
-  {
-    id: 4,
-    title: 'Weather Dashboard',
-    description: 'Real-time weather dashboard with location-based forecasts and interactive maps.',
-    tags: ['JavaScript', 'Weather API', 'Chart.js'],
-    image: 'https://placehold.co/600x400/e9ecef/6c757d?text=Weather+Dashboard',
+    title: 'Light Weight Meta Learning Botnet Attack System',
+    description: 'An innovative system utilizing meta-learning techniques to detect and prevent botnet attacks with minimal computational resources.',
+    tags: ['Python', 'Linux', 'Machine Learning'],
+    image: 'https://placehold.co/600x400/e9ecef/6c757d?text=Botnet+Detection+System',
     liveLink: '#',
     githubLink: '#',
   },
 ];
 
-// Filter categories
-const categories = ['All', 'React', 'TypeScript', 'JavaScript', 'Node.js'];
+// Filter categories based on your skills
+const categories = ['All', 'Java', 'MySQL', 'DBMS', 'Python', 'Linux', 'Machine Learning'];
 
 const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState('All');

@@ -4,11 +4,11 @@ import { Code, Palette, Lightbulb, Code2 } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const skills = [
-  { name: "HTML & CSS", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "React", level: 80 },
-  { name: "Node.js", level: 75 },
-  { name: "UI/UX Design", level: 85 },
+  "Java",
+  "MySQL",
+  "DBMS",
+  "Linux",
+  "Python"
 ];
 
 const services = [
@@ -46,19 +46,19 @@ const AboutSection = () => {
             My Experience & Skills
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-            A passionate designer and developer with a keen eye for detail and a dedication to delivering exceptional digital experiences.
+            A passionate developer with a keen eye for detail and a dedication to delivering exceptional digital experiences.
           </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-start">
-          <AnimatedSection className="md:col-span-5" animation="fade-right">
+          <AnimatedSection className="md:col-span-5" animation="slide-in-right">
             <div className="glass-panel p-8">
               <h3 className="text-xl font-semibold mb-4">Who I Am</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-5">
-                I'm a passionate digital creator with expertise in both design and development. With a background in computer science and a love for aesthetics, I bridge the gap between functionality and visual appeal.
+                I'm Nibbragandla Ranga Deepthi, a passionate developer with expertise in both frontend and backend technologies. With a strong foundation in computer science, I create functional and efficient solutions for complex problems.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-5">
-                My approach combines technical excellence with creative problem-solving, ensuring that every project I work on is not only visually stunning but also technically sound and user-focused.
+                My approach combines technical excellence with creative problem-solving, ensuring that every project I work on is not only visually appealing but also technically sound and user-focused.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
                 I believe in continuous learning and staying on top of industry trends and technologies to deliver cutting-edge solutions that exceed expectations.
@@ -66,26 +66,17 @@ const AboutSection = () => {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection className="md:col-span-7" animation="fade-left" delay={200}>
+          <AnimatedSection className="md:col-span-7" animation="slide-in-left" delay={200}>
             <div className="glass-panel p-8">
               <h3 className="text-xl font-semibold mb-6">My Skills</h3>
-              <div className="space-y-5">
-                {skills.map((skill, index) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium">{skill.name}</span>
-                      <span className="text-sm text-gray-500">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-blue-500 rounded-full transition-all duration-1000 ease-out"
-                        style={{ 
-                          width: `${skill.level}%`, 
-                          transitionDelay: `${index * 100 + 400}ms` 
-                        }}
-                      ></div>
-                    </div>
-                  </div>
+              <div className="flex flex-wrap gap-3">
+                {skills.map((skill) => (
+                  <span 
+                    key={skill} 
+                    className="px-4 py-2 bg-blue-500/10 text-blue-500 rounded-full text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>

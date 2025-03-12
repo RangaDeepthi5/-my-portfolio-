@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import AnimatedSection from './AnimatedSection';
 
@@ -8,21 +7,15 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    details: '+1 (555) 123-4567',
+    details: '+91 9390956920',
     description: 'Monday to Friday, 9am to 6pm',
   },
   {
     icon: Mail,
     title: 'Email',
-    details: 'hello@example.com',
+    details: 'deepthireddy8603@gmail.com',
     description: "I'll get back to you within 24 hours",
-  },
-  {
-    icon: MapPin,
-    title: 'Office',
-    details: 'San Francisco, CA',
-    description: 'Come say hello at our office',
-  },
+  }
 ];
 
 const ContactSection = () => {

@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react';
 import { Phone, Mail, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import AnimatedSection from './AnimatedSection';
+import emailjs from 'emailjs-com';
 
 const contactInfo = [
   {
@@ -36,8 +38,21 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Replace these with your actual EmailJS service ID, template ID, and user ID
+      const serviceId = 'your_service_id';
+      const templateId = 'your_template_id';
+      const userId = 'your_user_id';
+      
+      const templateParams = {
+        from_name: formData.name,
+        reply_to: formData.email,
+        message: formData.message,
+        to_name: 'Deepthi Reddy', // Your name
+      };
+      
+      await emailjs.send(serviceId, templateId, templateParams, userId);
+      
       toast({
         title: "Message sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
@@ -48,9 +63,16 @@ const ContactSection = () => {
         email: '',
         message: '',
       });
-      
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (

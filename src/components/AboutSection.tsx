@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, Palette, Lightbulb, Code2 } from 'lucide-react';
+import { Code, BookOpen, Layers, Database } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const skills = [
@@ -13,24 +13,24 @@ const skills = [
 
 const services = [
   {
-    title: "UI/UX Design",
-    description: "Creating intuitive and engaging user experiences with a focus on usability and aesthetics.",
-    icon: Palette,
-  },
-  {
-    title: "Frontend Development",
-    description: "Building responsive, fast and interactive user interfaces using modern frameworks and tools.",
+    title: "Web Development",
+    description: "Creating responsive and user-friendly websites using modern frameworks and tools.",
     icon: Code,
   },
   {
-    title: "Creative Solutions",
-    description: "Developing innovative approaches to solve complex problems with elegant solutions.",
-    icon: Lightbulb,
+    title: "Database Management",
+    description: "Designing and implementing efficient database solutions with MySQL and other DBMS systems.",
+    icon: Database,
   },
   {
-    title: "Full Stack Development",
-    description: "End-to-end application development with both frontend and backend expertise.",
-    icon: Code2,
+    title: "Backend Development",
+    description: "Building robust server-side applications with Java and Python technologies.",
+    icon: Layers,
+  },
+  {
+    title: "Continuous Learning",
+    description: "Staying updated with latest technologies and implementing best practices in all projects.",
+    icon: BookOpen,
   },
 ];
 
@@ -55,13 +55,7 @@ const AboutSection = () => {
             <div className="glass-panel p-8">
               <h3 className="text-xl font-semibold mb-4">Who I Am</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-5">
-                I'm Nibbragandla Ranga Deepthi, a passionate developer with expertise in both frontend and backend technologies. With a strong foundation in computer science, I create functional and efficient solutions for complex problems.
-              </p>
-              <p className="text-gray-600 dark:text-gray-300 mb-5">
-                My approach combines technical excellence with creative problem-solving, ensuring that every project I work on is not only visually appealing but also technically sound and user-focused.
-              </p>
-              <p className="text-gray-600 dark:text-gray-300">
-                I believe in continuous learning and staying on top of industry trends and technologies to deliver cutting-edge solutions that exceed expectations.
+                I'm Nibbragandla Ranga Deepthi, a dedicated developer with a strong foundation in Java, Python, and database management. As a fresher, I'm enthusiastic about applying my technical skills to create efficient and innovative solutions for real-world problems.
               </p>
             </div>
           </AnimatedSection>

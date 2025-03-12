@@ -15,7 +15,7 @@ const contactInfo = [
     icon: Mail,
     title: 'Email',
     details: 'hello@example.com',
-    description: 'I'll get back to you within 24 hours',
+    description: "I'll get back to you within 24 hours",
   },
   {
     icon: MapPin,
